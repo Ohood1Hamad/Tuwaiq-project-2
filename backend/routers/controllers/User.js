@@ -6,8 +6,8 @@ const getAllUser = (req,res)=>{
 }
 
 const getUser = (req,res)=>{
- const userinfo = user.find(elem=>{
-      return elem.nationalid === data.nationalid && elem.password === data.password
+ const userinfo = user.find(i=>{
+     return i == req.body.id 
       
      })
 
@@ -22,6 +22,7 @@ const addNewUser = (req,res)=>{
     const addedUser = {
         nationalid: req.body.nationalid,
         password: req.body.password,
+
 
     }
 

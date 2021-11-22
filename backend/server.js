@@ -1,13 +1,13 @@
 const express = require('express');
 const {logRouters} = require("./routers/routes/logRouters")
-const app = express(logRouters);
+const app = express();
 app.use(express.json());
 
 
 //routers
 
 //built-in middlewares
-app.use(express.json("/user",logRouters));
+app.use(("/user",logRouters));
 
 //third-party middleware
 // app.use(cors());
