@@ -1,0 +1,17 @@
+#logot{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    justify-content: center;
+}
+#con{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    justify-content: center;
+    justify-items: center;
+}
+#link{
+    text-decoration: none;
+    color: aquamarine;
+}

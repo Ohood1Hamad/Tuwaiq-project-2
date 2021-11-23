@@ -1,0 +1,11 @@
+.cards{
+    border-radius: 10px;
+    opacity: 10;
+   border-block-color:grey;
+   justify-content: center;
+   width: 700px;
+   height: 150px;
+   align-self: center;
+   margin-top: 50px;
+
+}

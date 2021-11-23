@@ -20,8 +20,14 @@ const getUser = (req,res)=>{
 
 const addNewUser = (req,res)=>{
     const addedUser = {
-        nationalid: req.body.nationalid,
-        password: req.body.password,
+        nationalId: req.body.nationalid,
+        passWord: req.body.password,
+    //   adminId=req.body.adminId,
+    //        drivingLicenses=req.body.drivingLicenses,
+    //       vehicles=req.body.vehicles,
+    //       trafficViolations=req.body.trafficViolations,
+    //       passPorts=req.body.passPorts,
+    //      vehicleInsurances=req.body.vehicleInsurances,
 
 
     }
@@ -35,8 +41,16 @@ const updateUser = (req,res)=>{
     const userId = req.query.id
     user.forEach((elem,i)=>{
         if(i == userId){
-            elem.nationalid=req.body.nationalid;
-            elem.password=req.body.password
+
+            elem.nationalId=req.body.nationalid;
+            elem.passWord=req.body.password;
+            // elem.adminId=req.body.adminId;
+            // elem.drivingLicenses=req.body.drivingLicenses;
+            // elem.vehicles=req.body.vehicles;
+            // elem.trafficViolations=req.body.trafficViolations;
+            // elem.passPorts=req.body.passPorts;
+            // elem.vehicleInsurances=req.body.vehicleInsurances;
+          
         }
     })
 }

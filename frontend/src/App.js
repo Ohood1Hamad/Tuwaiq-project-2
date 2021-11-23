@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from "./components/login/lndex";
 import Signup from "./components/Signup/Signup";
 import Main from "./components/main/index";
+import Dashboard from "./components/dashboard/index";
 import Header from "./components/header/index";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
 	<Route>
 <Route path="/" element={<Main/>}/>
 <Route path="/login" element={<Login/>}/>
+<Route path="/decst" element={<Dashboard/>}/>
 <Route path="/signup" element={<Signup/>}/>
 </Route>
 </Routes>

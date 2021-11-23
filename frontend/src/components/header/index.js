@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
-
 import { Navbar, Nav ,Container} from "react-bootstrap";
+import "./header.css"
 const Header = () => {
 	return(
 			<div className="App">
@@ -19,17 +19,19 @@ const Header = () => {
     </Navbar.Brand>
  
   <Navbar.Brand href="#home">Home</Navbar.Brand>
+  <Navbar.Brand href="#home"></Navbar.Brand>
+  <Navbar.Brand href="#home"></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link href="#features">About Tawakkalna</Nav.Link>
+      <Nav.Link href="#features"></Nav.Link>
       <Nav.Link href="#pricing">Contact Us</Nav.Link>
      
         
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-      <Link eventKey={2} href="#memes" to="/login">
+      <Link eventKey={2} href="#memes" id="sing" to="/login">
        
       SIGE IN
       </Link>
