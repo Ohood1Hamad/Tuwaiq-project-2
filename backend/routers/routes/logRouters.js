@@ -6,7 +6,7 @@ const {getUser,getAllUser,updateUser,addNewUser} = require("../controllers/user"
 const { user } = require("../db");
 
 logRouters.get("/",getAllUser);
-logRouters.get('/:id',getUser);
+logRouters.get('/user',getUser);
 logRouters.post('/user',addNewUser);
 logRouters.put('/user',updateUser);
 

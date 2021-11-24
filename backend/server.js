@@ -7,7 +7,7 @@ app.use(express.json());
 //routers
 
 //built-in middlewares
-app.use(("/user",logRouters));
+app.use("/user",logRouters);
 
 //third-party middleware
 // app.use(cors());

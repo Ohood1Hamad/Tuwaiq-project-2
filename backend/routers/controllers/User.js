@@ -22,12 +22,12 @@ const addNewUser = (req,res)=>{
     const addedUser = {
         nationalId: req.body.nationalid,
         passWord: req.body.password,
-    //   adminId=req.body.adminId,
-    //        drivingLicenses=req.body.drivingLicenses,
-    //       vehicles=req.body.vehicles,
-    //       trafficViolations=req.body.trafficViolations,
-    //       passPorts=req.body.passPorts,
-    //      vehicleInsurances=req.body.vehicleInsurances,
+      adminId: req.body.adminId,
+           drivingLicenses: req.body.drivingLicenses,
+          vehicles: req.body.vehicles,
+          trafficViolations: req.body.trafficViolations,
+          passPorts: req.body.passPorts,
+         vehicleInsurances: req.body.vehicleInsurances,
 
 
     }
@@ -44,12 +44,12 @@ const updateUser = (req,res)=>{
 
             elem.nationalId=req.body.nationalid;
             elem.passWord=req.body.password;
-            // elem.adminId=req.body.adminId;
-            // elem.drivingLicenses=req.body.drivingLicenses;
-            // elem.vehicles=req.body.vehicles;
-            // elem.trafficViolations=req.body.trafficViolations;
-            // elem.passPorts=req.body.passPorts;
-            // elem.vehicleInsurances=req.body.vehicleInsurances;
+            elem.adminId=req.body.adminId;
+            elem.drivingLicenses=req.body.drivingLicenses;
+            elem.vehicles=req.body.vehicles;
+            elem.trafficViolations=req.body.trafficViolations;
+            elem.passPorts=req.body.passPorts;
+            elem.vehicleInsurances=req.body.vehicleInsurances;
           
         }
     })

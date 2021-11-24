@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
+import { Col, Row, Card, Container} from "react-bootstrap";
+import axios from "axios";
+
+
 
 
 export default function Users() {
-  const [adminId, setAdminId] = useState("");
-  const [drivingLicenses, setDrivingLicenses]=useState("")
-  const [vehicles, setVehicles]=useState("")
-  const [trafficViolations, setTrafficViolations]=useState("")
-  const [passports, setPassPorts]=useState("")
+  const [user, setUser] = useState([]);
+  
     
     useEffect(()=> {
-       axios.post("/user", {
-      data,
-    })
+       axios.get("/user")
     .then((res) => {
       console.log(res);
-      console.log(res.data);
+    this.setState({setUser});
+    this.setState({events: res.data})
     })
     .catch((err) => {
       console.log(err);
@@ -23,25 +23,28 @@ export default function Users() {
     }); 
     }
     );
-    let usersID=user.map((users) => {
+     let usersID=user.map((users,i) => {
         return(
-            
-                //           key={prod.id}
-                //           imgUrl={prod.imgUrl}
-                //           name={prod.name}
-                //           price={prod.price}
-                //           inCart={prod.inCart}
-                //         />
-        )
+            <div key={i}>
+<Container>
+  <Row>
+    <Col><Card body>{users.nationalId}</Card></Col>
+    <Col><Card body>{users.adminId}</Card></Col>
+  </Row>
+  <Row>
+    <Col><Card body>This is some text within a card body.</Card></Col>
+    <Col><Card body>This is some text within a card body.</Card></Col>
+    <Col><Card body>This is some text within a card body.</Card></Col>
+  </Row>
+</Container>
+
+            </div>  )
+      
         
-    });
-    
-
+    })
     return(
-        <div>
-
-        </div>
+      <div>
+        {usersID}
+      </div>
     )
-
-    
-}
+    ;}

@@ -10,23 +10,22 @@ export default function Login() {
   const navigate = useNavigate();
 
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
     const data = {
       nationalId: nationalId,
       password: password,
     };
-    console.log(
-      "" + JSON.stringify({ nationalid: nationalId }, { password: password })
-    );
+    // console.log(
+    //   "" + JSON.stringify({ nationalid: nationalId }, { password: password })
+    // );
     axios
-      .post("/user", {
+      .post("/user/user", {
         data,
       })
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        navigate("/");
-        // window.location.href = '/Main';
+        navigate("/decst");
       })
       .catch((err) => {
         console.log(err);
@@ -45,7 +44,7 @@ export default function Login() {
               <img
                 id="logot"
                 src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
-              />
+             alt=" " />
             </div>
             <div className="row">
               <div className="col">Login</div>
@@ -54,13 +53,12 @@ export default function Login() {
                 <Link to="/signup" id="link">sing up </Link>{" "}
               </div>{" "}
             </div>
-            <Form>
+            <Form onSubmit={(e) => {
+                  handleSubmit(e);
+                }}>
               <Form.Group
                 className="mb-3"
                 controlId=""
-                onSubmit={(e) => {
-                  handleSubmit(e);
-                }}
               >
                 <Form.Label> Enter Nationalid </Form.Label>
                 <Form.Control
