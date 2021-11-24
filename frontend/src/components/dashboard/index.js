@@ -1,8 +1,9 @@
 import React from "react";
+// import React from "react";
 import { Card, Col, Row, Container } from "react-bootstrap";
 import "./dashboard.css";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   return (
     <div className="App">
       <Container>
@@ -10,16 +11,25 @@ const Dashboard = () => {
           <Col>nav </Col>
           <Col md={8}>
             <Card className="cards">
-                
               <Card.Body>
-			  <Row>
-    <Col><p> Name: </p></Col>
-    <Col> <p> National ID number / Iqama ID: </p></Col>
-  </Row>
-  <Row>
-    <Col><h3>OHOOD HAMAD AHAMAD </h3></Col>
-    <Col> <h3>101010101010 </h3></Col>
-  </Row>
+                <Row>
+                  <Col>
+                    <p> Name: </p>
+                  </Col>
+                  <Col>
+                    {" "}
+                    <p> National ID number / Iqama ID: </p>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h3>{props.nationalId} </h3>
+                  </Col>
+                  <Col>
+                    {" "}
+                    <h3>{props.nationalId} </h3>
+                  </Col>
+                </Row>
               </Card.Body>
             </Card>
           </Col>
@@ -36,3 +46,18 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+// <div key={i}>
+// <Container>
+//   <Row>
+//     <Col><Card body>{users.nationalId}</Card></Col>
+//     <Col><Card body>{users.adminId}</Card></Col>
+//   </Row>
+//   <Row>
+//     <Col><Card body>This is some text within a card body.</Card></Col>
+//     <Col><Card body>This is some text within a card body.</Card></Col>
+//     <Col><Card body>This is some text within a card body.</Card></Col> */}
+//   {/* </Row> */}
+// {/* </Container> */}
+
+//             </div>

@@ -1,50 +1,38 @@
 import { useEffect, useState } from "react";
-import { Col, Row, Card, Container} from "react-bootstrap";
+// import { Col, Row, Card, Container} from "react-bootstrap";
 import axios from "axios";
-
-
-
+import Dashboard from "./index";
 
 export default function Users() {
   const [user, setUser] = useState([]);
-  
-    
-    useEffect(()=> {
-       axios.get("/user")
-    .then((res) => {
-      console.log(res);
-    this.setState({setUser});
-    this.setState({events: res.data})
-    })
-    .catch((err) => {
-      console.log(err);
 
-      console.log("Password or User name are Wrong");
-    }); 
-    }
+  useEffect(() => {
+    axios
+      .get("/user/user")
+      .then((res) => {
+        console.log(res);
+        this.setState({ setUser });
+        // this.setState({events: res.data})
+      })
+      .catch((err) => {
+        console.log(err);
+
+        console.log("Password or User name are Wrong");
+      });
+  });
+  let usersID = user.map((users, i) => {
+    return (
+      <Dashboard
+        key={i}
+        nationalId={users.nationalId}
+        adminId={users.adminId}
+        drivingLicenses={users.drivingLicenses}
+        vehicles={users.vehicles}
+        trafficViolations={users.trafficViolations}
+        passports={users.passports}
+        vehicleInsurances={users.vehicleInsurances}
+      />
     );
-     let usersID=user.map((users,i) => {
-        return(
-            <div key={i}>
-<Container>
-  <Row>
-    <Col><Card body>{users.nationalId}</Card></Col>
-    <Col><Card body>{users.adminId}</Card></Col>
-  </Row>
-  <Row>
-    <Col><Card body>This is some text within a card body.</Card></Col>
-    <Col><Card body>This is some text within a card body.</Card></Col>
-    <Col><Card body>This is some text within a card body.</Card></Col>
-  </Row>
-</Container>
-
-            </div>  )
-      
-        
-    })
-    return(
-      <div>
-        {usersID}
-      </div>
-    )
-    ;}
+  });
+  return <div>{usersID}</div>;
+}

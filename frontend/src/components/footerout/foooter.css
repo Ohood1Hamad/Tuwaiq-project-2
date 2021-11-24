@@ -1,0 +1,11 @@
+.daw img {
+    width: 250px;
+    /* align-items: flex-end; */
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+
+}
+.toto{
+    justify-content: space-around;
+}

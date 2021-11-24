@@ -7,7 +7,7 @@ const { user } = require("../db");
 
 logRouters.get("/",getAllUser);
 logRouters.get('/user',getUser);
-logRouters.post('/user',addNewUser);
+logRouters.post('/login',addNewUser);
 logRouters.put('/user',updateUser);
 
 module.exports={logRouters};

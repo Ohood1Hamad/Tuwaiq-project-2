@@ -1,10 +1,16 @@
 import React from 'react';
 import {Carousel} from "react-bootstrap";
 import './main.css'
+import Header from "../header/index";
+import Foooter from "../footerout/foooter";
+import Contact from "../contact/contactus";
+import Howwork from "../howto/Howto";
+import Aboutus from "../About/About";
 
 
 const Main = () => {
 	return <div className="App">
+		<Header/>
 
 
 <Carousel>
@@ -42,6 +48,10 @@ const Main = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+<Aboutus/>
+<Howwork/>
+<Contact/>
+<Foooter/>
 	</div>;
 };
 
