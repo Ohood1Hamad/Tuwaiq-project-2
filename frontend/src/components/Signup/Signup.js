@@ -11,27 +11,24 @@ export default function Signup() {
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
-      nationalId: nationalId,
-      password: password,
+      nationalid: "",
+      password: "",
+
     };
     // console.log(
     //   "" + JSON.stringify({ nationalid: nationalId }, { password: password })
     // );
     axios
-      .post("/user/login", {
-        data,
-      })
+      .post("/user/singup",data)
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        navigate("/decst");
-        // window.location.href = '/Main';
+        navigate("/");
+        
       })
       .catch((err) => {
         console.log(err);
-
-        console.log("Password or User name are Wrong");
-      });
+            });
   }
   return (
     <div className="continer">

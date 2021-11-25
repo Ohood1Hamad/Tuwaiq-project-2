@@ -2,21 +2,35 @@ const {user} = require('../db')
 
 
 const getAllUser = (req,res)=>{
-    res.send(user)
+    res.send(user)                                                                
 }
-
+//////////////////////////////////////////////get////////////////////
 const getUser = (req,res)=>{
- const userinfo = user.find(i=>{
-     return i == req.body.id 
+    // console.log(nationalId)
+    // console.log(password)
+    console.log(req.body)
+ const userinfo = user.find((elem)=>{
+     return elem.nationalId == req.body.nationalId && elem.passWord == req.body.passWord
       
      })
-
-    if(userinfo.length > 0){
-    res.send(userinfo[0])
+    //  const userinfo = user.find(elem=>{
+    //     return elem.email === data.email && elem.password === data.password
+console.log(userinfo);
+    if(userinfo){
+    res.send(userinfo)
     return
     }
     res.status(404).send("user not found")
 }
+///////////////////////////get dashbord////////////////////////
+const getUserInfo=(req,res)=>{
+    const userId = user.find(({id})=>  id === parseInt(req.body.id));
+    console.log(userId)
+    if(userId)return res.status(404).send("ERROR USER NOT FOUND");
+res.send(userId);
+     }
+    
+////////////////////////////////////////post/////////////////////////
 
 const addNewUser = (req,res)=>{
     const addedUser = {
@@ -55,4 +69,6 @@ const updateUser = (req,res)=>{
     })
 }
 
-module.exports = {getAllUser,getUser,updateUser,addNewUser}
+module.exports = {getAllUser,getUser,updateUser,addNewUser,
+ getUserInfo
+}

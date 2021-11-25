@@ -1,9 +1,29 @@
 import React from "react";
 // import React from "react";
 import { Card, Col, Row, Container } from "react-bootstrap";
+// import { useLocation } from "react-router";
 import "./dashboard.css";
+import {useLocation} from 'react-router-dom';
+import  { useState,useEffect } from "react";
 
-const Dashboard = (props) => {
+import axios from "axios";
+
+const DashboardDetails = () => {
+  const{state} = useLocation();
+  const [userr, setUser] = useState([]);
+
+
+useEffect(() => {
+  axios
+    .post("/dash/use",state)
+    .then((res) => {
+      console.log(res);
+      setUser(res.data)
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
   return (
     <div className="App">
       <Container>
@@ -23,11 +43,11 @@ const Dashboard = (props) => {
                 </Row>
                 <Row>
                   <Col>
-                    <h3>{props.nationalId} </h3>
+                    <h3>{state.nationalId}</h3>
                   </Col>
                   <Col>
                     {" "}
-                    <h3>{props.nationalId} </h3>
+                    <h3> </h3>
                   </Col>
                 </Row>
               </Card.Body>
@@ -45,7 +65,7 @@ const Dashboard = (props) => {
   );
 };
 
-export default Dashboard;
+export default DashboardDetails;
 
 // <div key={i}>
 // <Container>

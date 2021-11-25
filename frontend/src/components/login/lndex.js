@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Form, Button, Col, Row, Container } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import "./login.css";
@@ -9,26 +10,33 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  useEffect(()=>{
+      
+  },[])
   function handleSubmit(e) {
     e.preventDefault()
     const data = {
       nationalId: nationalId,
-      password: password,
+      passWord: password,
     };
     // console.log(
     //   "" + JSON.stringify({ nationalid: nationalId }, { password: password })
     // );
+
+    
     axios
-      .post("/user/user", {
+      .post("/user/login", 
         data,
-      })
+      )
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        navigate("/decst");
+         navigate("/",
+         {state:{id:res.data.id}}
+         );
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response.data);
 
         console.log("Password or User name are Wrong");
       });

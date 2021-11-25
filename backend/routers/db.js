@@ -2,12 +2,24 @@ const user =[
     {
         id:1,
         nationalId:"101012121",
-        passwrd:"1100",
+        passWord:"1100",
         adminId:"OHOOD HAMAD AHAMAD",
-        drivingLicenses:1,
+        drivingLicenses:{
+            issueDate:'',
+            expiryDate:'',
+            issuePlace:'',
+            count: 1,
+            img:"",
+        },
         vehicles:1,
         trafficViolations:15,
-        passports:2,
+        passport:{
+            number:'',
+            issueDate:'',
+            issuePlace:'',
+            expiryDate:'',
+            count:0
+        },
         vehicleInsurances:5,
 
 
@@ -15,25 +27,49 @@ const user =[
     {
         id:2,
         nationalId:"147893256",
-        password:"1414",
+        passWord:"1414",
         adminId:"NADA HAMAD AHAMAD",
-        drivingLicenses:1,
+        drivingLicenses:{
+            issueDate:'',
+            expiryDate:'',
+            issuePlace:'',
+            count: 1,
+            img:"",
+        },
         vehicles:1,
-        trafficViolations:118,
-        passPorts:2,
-        vehicleInsurances:11,
+        trafficViolations:15,
+        passPort:{
+            number:'',
+            issueDate:'',
+            issuePlace:'',
+            expiryDate:'',
+            count:1
+        },
+        vehicleInsurances:8,
 
 
     }, {
         id:3,
         nationalId:"1236974581",
-        password:"7878",
+        passWord:"7878",
         adminId:"AHAMAD SALIM AHAMAD",
-        drivingLicenses:2,
+        drivingLicenses:{
+            issueDate:'',
+            expiryDate:'',
+            issuePlace:'',
+            count: 1,
+            img:"",
+        },
         vehicles:1,
-        trafficViolations:2,
-        passPorts:0,
-        vehicleInsurances:1,
+        trafficViolations:15,
+        passPort:{
+            number:'',
+            issueDate:'',
+            issuePlace:'',
+            expiryDate:'',
+            count:2
+        },
+        vehicleInsurances:4,
 
 
     }, 
