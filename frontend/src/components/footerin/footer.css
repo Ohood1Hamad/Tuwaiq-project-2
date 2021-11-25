@@ -1,0 +1,15 @@
+.foot{
+    text-align: left;
+text-align: space-between;
+word-spacing: 10px;
+
+
+}
+.containar-foot{
+    background-color: #bbb;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    height: 50px;
+    padding: 10px;
+    font-size: 15px;
+}

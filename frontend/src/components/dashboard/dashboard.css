@@ -6,6 +6,25 @@
    width: 700px;
    height: 150px;
    align-self: center;
-   margin-top: 50px;
 
+}
+.prom{
+    border-radius: 10px;
+    opacity: 10;
+    justify-content: center;
+    border-image-outset: unset;
+   width: 700px;
+   height: 600px;
+   align-self: center;
+}
+.code{
+    border-radius: 10px;
+    opacity: 10;
+    justify-content: center;
+    border-image-outset: unset;
+   width: 300px;
+   height: 150px;
+   align-self: center;
+   border: shadow 10px;;
+   
 }

@@ -31,7 +31,7 @@ export default function Login() {
       .then((res) => {
         console.log(res);
         console.log(res.data);
-         navigate("/",
+         navigate("/DashDeta",
          {state:{id:res.data.id}}
          );
       })
