@@ -4,32 +4,31 @@ import { Navbar, Nav ,Container} from "react-bootstrap";
 import "./header.css"
 const Header = () => {
 	return(
-			<div className="App">
-<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+			<div className="App-head">
+<Navbar collapseOnSelect expand="lg"  variant="dark">
   <Container>
 
     <Navbar.Brand href="#home">
       <img
         src="https://ta.sdaia.gov.sa/images/NewImages/logo.svg"
-        width="100"
-        height="100"
+        width="200"
+      
         className="d-inline-block align-top"
-        alt="React Bootstrap logo"
+        alt="logo"
       />
     </Navbar.Brand>
- 
-  <Navbar.Brand href="#home">Home</Navbar.Brand>
+
+  <Navbar.Brand href="/Aboutus" id="home-nav">Home</Navbar.Brand>
   <Navbar.Brand href="#home"></Navbar.Brand>
   <Navbar.Brand href="#home"></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-      <Nav.Link href="#features">About Tawakkalna</Nav.Link>
-      <Nav.Link href="#features"></Nav.Link>
-      <Nav.Link href="#pricing">Contact Us</Nav.Link>
-     
-        
-    </Nav>
+    <Nav className="me-auto" id="home-nav">
+      <Nav.Link href="/Aboutus">About Tawakkalna</Nav.Link>
+      <Nav.Link href="/Howwork"> How Tawakkalna work </Nav.Link>
+      <Nav.Link href="/Contact">Contact Us</Nav.Link>
+    
+     </Nav>
     <Nav>
       <Link eventKey={2} href="#memes" id="sing" to="/login">
        
@@ -40,7 +39,8 @@ const Header = () => {
   </Container>
 </Navbar>
 	<Outlet/>
-	</div>)
+	</div>
+  )
 };
 
 export default Header;

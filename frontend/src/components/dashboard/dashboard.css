@@ -8,6 +8,12 @@
    align-self: center;
 
 }
+.dashboard{
+    margin: 10px;
+}
+.cards:hover{
+    color: coral;
+}
 .prom{
     border-radius: 10px;
     opacity: 10;
@@ -27,4 +33,7 @@
    align-self: center;
    border: shadow 10px;;
    
+}
+.code:hover {
+color: aquamarine;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 // import provider
@@ -8,8 +8,8 @@ import App from './App';
 
 ReactDOM.render(
   // The provider will enable the child components to access the store
-	<Router>
+	<BrowserRouter>
 		<App />
-	</Router>,
+	</BrowserRouter>,
   document.getElementById("root")
 );

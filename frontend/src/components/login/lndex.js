@@ -18,17 +18,16 @@ export default function Login() {
     };
     
     axios
-      .post("/user/login", 
-        data,
-      )
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
-         navigate("/DashDeta",
-         {state:{id:res.data.id}}
-         );
-       
-      })
+    .post("/user/login", 
+      data,
+    )
+    .then((res) => {
+      console.log(res);
+      console.log(res.data);
+       navigate("/DashDeta",
+       {state:{id:res.data.id}}
+       );
+    })
       .catch((err) => {
         console.log(err.response.data);
 
@@ -36,20 +35,20 @@ export default function Login() {
       });
   }
   return (
-    <div>
+    <div >
       <Container>
-        <Row>
+        <Row id="row-log">
           <Col xs></Col>
           <Col xs={{ order: 12 }}>
-            <div className="row">
+            <div className="row" id="row-log">
               {" "}
               <img
                 id="logot"
                 src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
              alt=" " />
             </div>
-            <div className="row">
-              <div className="col">Login</div>
+            <div className="row" id="row-log">
+              <div className="col" style={{fontSize:"35px",fontWeight:"bold"}}>Login</div>
               <div className="col">
                 {" "}
                 <Link to="/signup" id="link">sing up </Link>{" "}
@@ -84,9 +83,9 @@ export default function Login() {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
+                <Form.Check type="checkbox" label="remember me" />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button  variant="primary" type="submit">
                 LogIn
               </Button>
             </Form>

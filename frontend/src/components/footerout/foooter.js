@@ -5,11 +5,11 @@ import "./foooter.css"
 
 const Foooter = () => {
   return (
-    <div className="App">
+    <div className="App-footer">
       <Container>
         <Row>
           <Col className="toto">
-            <div >
+            <div className="logg">
               <img
                 src="https://ta.sdaia.gov.sa/images/NewImages/logo.svg"
                 alt=" "
@@ -35,24 +35,28 @@ const Foooter = () => {
             </ul>
           </Col>
           <Col className="daw">
-            <div >
-              <img src="https://ta.sdaia.gov.sa/images/NewImages/googleplay.png" alt=" " />
-            </div>
-            <div>
-              <img src="https://ta.sdaia.gov.sa/images/NewImages/appstore.png" alt=" " />
-            </div>
-            <div>
-              <img src="https://ta.sdaia.gov.sa/images/NewImages/huaweigalary.png" alt=" " />
+            <div className="imege" >
+              <h4> Download the app</h4>
+              <a  href="#" >
+              <img src="https://ta.sdaia.gov.sa/images/NewImages/googleplay.png" alt=" " /> </a>
+            
+            <a href="#" >
+
+              <img  src="https://ta.sdaia.gov.sa/images/NewImages/appstore.png" alt=" " /></a>
+           
+            <a href="#" >
+
+              <img src="https://ta.sdaia.gov.sa/images/NewImages/huaweigalary.png" alt=" " /></a>
             </div>
           </Col>
         </Row>
-        {/* <Row>
+        <Row>
     <Col>
     
     </Col>
-    <Col xs={5}>2 of 3 (wider)</Col>
-    <Col>3 of 3</Col>
-  </Row> */}
+    <Col xs={5} style={{fontSize:"20px"}} >© All rights reserved, SDAIA, 2021</Col>
+    <Col></Col>
+  </Row>
       </Container>
       <Outlet/>
     </div>

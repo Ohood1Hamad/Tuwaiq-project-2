@@ -1,17 +1,22 @@
 *{
     font-family:Candara ;
 }
-.row-contact{
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-image: linear-gradient(-45deg,#911F27,#8E0505);
+.ro-contact{
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background-image: linear-gradient(-45deg,#bcf0ea,#1FA99A);
     margin-right: 1300px;
     color: azure;
-    font-size: 20px;
-    
+    font-size: 30px;
+    padding: 30px;
+    margin: 5px;
     
 }
-.row-contact img {
+.ro-contact img {
     width: 25px;
     margin: 2px;
+}
+.contact{
+    margin-top: 40px;
+    color: #1FA99A;
 }

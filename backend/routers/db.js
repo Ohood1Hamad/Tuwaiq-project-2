@@ -11,7 +11,12 @@ const user =[
             count: 1,
             img:"",
         },
-        vehicles:1,
+        vehicles:{
+            count:2,
+            type:"mmm",
+            typeTwo:"mmm",
+
+        },
         trafficViolations:15,
         passport:{
             number:'',

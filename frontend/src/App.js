@@ -8,7 +8,7 @@ import DashboardDetails from "./components/dashboard/DashboardDetails";
  import Contact from "./components/contact/contactus";
  import Howwork from './components/howto/Howto';
  import Aboutus from './components/About/About';
- import Dashboard from './components/dashboard/Dashboard';
+//  import Dashboard from './components/dashboard/Dashboard';
  import Navigation from './components/navigation/Navigation';
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
 <Route path="/Contact" element={<Contact/>}/>
 <Route path="/Howwork" element={<Howwork/>}/>
 <Route path="/Aboutus" element={<Aboutus/>}/>
-<Route path="/dashboard" element={<Dashboard/>}/>
+{/* <Route path="/dashboard" element={<Dashboard/>}/> */}
  <Route path="/Navigation" element={<Navigation/>}/>
 {/* <Route path="/dashboard" element={<Users/>}/>
 <Route path="/dashboard" element={<Users/>}/>  */}
