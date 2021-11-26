@@ -1,53 +1,97 @@
-import { useEffect, useState } from "react";
-import { Col, Row, Card, Container} from "react-bootstrap";
-import axios from "axios";
-// import { useNavigate } from "react-router";
-// import DashboardDetails from "./DashboardDetails";
+import React from "react";
+/// import React from "react";
+import { Card, Col, Row, Container } from "react-bootstrap";
+// import { useLocation } from "react-router";
+import { useLocation,useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Footer from "../footerin/index"
 
-export default function Dashboard() {
-  const [user, setUser] = useState([]);
+import axios from "axios";
+
+const Dashboard = () => {
+  const { root } = useLocation();
+   const [drivingLicenses, setDrivingLicenses] = useState({});
+   const userId = root.id;
+  // const navigate = useNavigate();
+  
 
   useEffect(() => {
     axios
-      .post("/dash/use")
+      .post("/user/usersdash",
+       {id:userId}
+      )
       .then((res) => {
         console.log(res);
-        // this.setState({ setUser });
-        setUser(res.data)
-        // this.setState({events: res.data})
+        // setUser(res.data);
+         setDrivingLicenses(res.data.drivingLicenses);
       })
       .catch((err) => {
         console.log(err);
       });
-  });
 
-
-
-return(
-  <>
-    <Container>
-  <Row>
-   {/* <Col><Card body> < a onClick={()=>{toDashboardDetails()}}> DashboardDetails </a></Card></Col> */}
+  },[ ]);
   
- </Row> 
-  </Container> 
+  return (
+   <div>
+<Container>
+<Row>
+          <Col></Col>
 
-  </>
-)
+          <Col>
+            <Card className="code">
+              <Card.Body> {drivingLicenses.count} </Card.Body>
+            </Card>
+            </Col>
+            <Col>
+            <Card className="code">
+              <Card.Body> promtion </Card.Body>
+            </Card>
+            </Col>
+            <Col>
+            <Card className="code">
+              <Card.Body> promtion </Card.Body>
+            </Card>
+            </Col>
+            <Col>
+            <Card className="code">
+              <Card.Body> promtion </Card.Body>
+            </Card>
+            </Col>
+        
+          </Row>
+          <Row>
+          <Col></Col>
 
-   {/* let usersID = user.map((users, i) => {
-    return (
-      <DashboardDetails
-        key={i}
-        nationalId={users.nationalId}
-        adminId={users.adminId}
-        drivingLicenses={users.drivingLicenses}
-        vehicles={users.vehicles}
-        trafficViolations={users.trafficViolations}
-        passports={users.passports}
-        vehicleInsurances={users.vehicleInsurances}
-      />
-    );
-  });
-  return <div>{usersID}</div>; */}
+          <Col>
+            <Card className="code">
+              <Card.Body> promtion </Card.Body>
+            </Card>
+            </Col>
+            <Col>
+            <Card className="code">
+              <Card.Body> promtion </Card.Body>
+            </Card>
+            </Col>
+            <Col>
+            <Card className="code">
+              <Card.Body> promtion </Card.Body>
+            </Card>
+            </Col>
+            <Col>
+            <Card className="code">
+              <Card.Body> promtion </Card.Body>
+            </Card>
+            </Col>
+        
+          </Row>
+      </Container>
+
+<Footer/>
+
+            </div>
+  )
 }
+  
+export default Dashboard;
+
+

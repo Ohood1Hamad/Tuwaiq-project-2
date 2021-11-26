@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useEffect } from "react";
 import { Form, Button, Col, Row, Container } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import "./login.css";
@@ -10,19 +9,13 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  useEffect(()=>{
-      
-  },[])
+ 
   function handleSubmit(e) {
     e.preventDefault()
     const data = {
       nationalId: nationalId,
       passWord: password,
     };
-    // console.log(
-    //   "" + JSON.stringify({ nationalid: nationalId }, { password: password })
-    // );
-
     
     axios
       .post("/user/login", 
@@ -34,6 +27,7 @@ export default function Login() {
          navigate("/DashDeta",
          {state:{id:res.data.id}}
          );
+       
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -102,4 +96,5 @@ export default function Login() {
       </Container>
     </div>
   );
+
 }

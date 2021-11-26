@@ -9,6 +9,7 @@ import DashboardDetails from "./components/dashboard/DashboardDetails";
  import Howwork from './components/howto/Howto';
  import Aboutus from './components/About/About';
  import Dashboard from './components/dashboard/Dashboard';
+ import Navigation from './components/navigation/Navigation';
 
 const App = () => {
 	return( <div>
@@ -24,9 +25,9 @@ const App = () => {
 <Route path="/Howwork" element={<Howwork/>}/>
 <Route path="/Aboutus" element={<Aboutus/>}/>
 <Route path="/dashboard" element={<Dashboard/>}/>
+ <Route path="/Navigation" element={<Navigation/>}/>
 {/* <Route path="/dashboard" element={<Users/>}/>
-<Route path="/dashboard" element={<Users/>}/>
-<Route path="/dashboard" element={<Users/>}/> */}
+<Route path="/dashboard" element={<Users/>}/>  */}
 </Route>
 </Routes>
 	

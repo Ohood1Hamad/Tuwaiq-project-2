@@ -23,10 +23,44 @@ console.log(userinfo);
     res.status(404).send("user not found")
 }
 ///////////////////////////get dashbord////////////////////////
+// const getUserInfo = (req,res)=>{
+//     console.log(typeof user)
+//     const foundUser = user.find((elem, i) =>{
+//         return elem == req.body.id 
+//     })
+
+//     /* .find => element || undefined
+//     .filter => [element1, element2], || []
+//      */
+
+//     if(foundUser){
+//     res.send(foundUser)
+//     return
+//     }
+//     res.status(404).send("user not found")
+// }
+
+// const getUserInfo = (req,res)=>{
+//     // console.log(nationalId)
+//     // console.log(password)
+//     console.log(req.body)
+//  const userinfo = user.find((elem)=>{
+//      return elem.id == req.body.id 
+      
+//      })
+//     //  const userinfo = user.find(elem=>{
+//     //     return elem.email === data.email && elem.password === data.password
+// console.log(userinfo);
+//     if(userinfo){
+//     res.send(userinfo)
+//     return
+//     }
+//     res.status(404).send("user not found")
+// }
 const getUserInfo=(req,res)=>{
-    const userId = user.find(({id})=>  id === parseInt(req.body.id));
+    const userId = user.find(({id}) => id === parseInt(req.body.id));
     console.log(userId)
-    if(userId)return res.status(404).send("ERROR USER NOT FOUND");
+    if(!userId)return res.status(404).send("ERROR USER NOT FOUND");
 res.send(userId);
      }
     
