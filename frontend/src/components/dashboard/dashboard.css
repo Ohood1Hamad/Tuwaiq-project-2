@@ -1,18 +1,22 @@
 .cards{
     border-radius: 10px;
     opacity: 10;
-   border-block-color:grey;
    justify-content: center;
    width: 700px;
    height: 150px;
    align-self: center;
+   color: #1FA99A;
 
+   
+}
+.dash-img{
+    align-items: center;
 }
 .dashboard{
     margin: 10px;
 }
 .cards:hover{
-    color: coral;
+    color: #a3ebe2;
 }
 .prom{
     border-radius: 10px;
