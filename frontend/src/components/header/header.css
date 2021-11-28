@@ -1,27 +1,36 @@
+body {
+  background-color: #f9fdfd;
+}
+.App-head {
+  background-image: linear-gradient(-45deg, #bcf0ea, #1fa99a, #058879);
+position: fixed ;
+width:100%;
+text-decoration: none;
 
-body{
-    background-color: #f9fdfd;
+
 }
-.App-head{
-    background-image: linear-gradient(-45deg,#bcf0ea,#1FA99A,#058879);
-    
+#home-nav {
+  font-size: 20px;
+  color: azure;
+/* text-decoration: none!important */
+
 }
-#home-nav{
-    font-size: 25px;
-    color: azure;
+#home-nav:hover{
+    color:#058879 ;
 }
-#sing{
-    background-color:rgb(182, 96, 96);
-    text-decoration: none;
-    color:#022521;
-    border-radius: 50px;
-    margin: 30px;
-    padding: 30px;
-    font-size: 25px;
-    width: 200px;
-    text-align: center;
-    
+
+
+#sing {
+  background-color: rgb(182, 96, 96);
+  text-decoration: none;
+  color: #022521;
+  border-radius: 50px;
+  margin: 30px;
+  padding: 30px;
+  font-size: 20px;
+  width: 200px;
+  text-align: center;
 }
-#sing:hover{
-    color: bisque;
+#sing:hover {
+  color: bisque;
 }

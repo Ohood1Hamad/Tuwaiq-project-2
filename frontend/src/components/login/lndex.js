@@ -9,25 +9,20 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
- 
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     const data = {
       nationalId: nationalId,
       passWord: password,
     };
-    
+
     axios
-    .post("/user/login", 
-      data,
-    )
-    .then((res) => {
-      console.log(res);
-      console.log(res.data);
-       navigate("/DashDeta",
-       {state:{id:res.data.id}}
-       );
-    })
+      .post("/user/login", data)
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+        navigate("/DashDeta", { state: { id: res.data.id } });
+      })
       .catch((err) => {
         console.log(err.response.data);
 
@@ -35,7 +30,7 @@ export default function Login() {
       });
   }
   return (
-    <div >
+    <div>
       <Container>
         <Row id="row-log">
           <Col xs></Col>
@@ -45,22 +40,29 @@ export default function Login() {
               <img
                 id="logot"
                 src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
-             alt=" " />
+                alt=" "
+              />
             </div>
             <div className="row" id="row-log">
-              <div className="col" style={{fontSize:"35px",fontWeight:"bold"}}>Login</div>
+              <div
+                className="col"
+                style={{ fontSize: "35px", fontWeight: "bold" }}
+              >
+                Login
+              </div>
               <div className="col">
                 {" "}
-                <Link to="/signup" id="link">sing up </Link>{" "}
+                <Link to="/signup" id="link">
+                  sing up{" "}
+                </Link>{" "}
               </div>{" "}
             </div>
-            <Form onSubmit={(e) => {
-                  handleSubmit(e);
-                }}>
-              <Form.Group
-                className="mb-3"
-                controlId=""
-              >
+            <Form
+              onSubmit={(e) => {
+                handleSubmit(e);
+              }}
+            >
+              <Form.Group className="mb-3" controlId="">
                 <Form.Label> Enter Nationalid </Form.Label>
                 <Form.Control
                   type="id"
@@ -85,7 +87,7 @@ export default function Login() {
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="remember me" />
               </Form.Group>
-              <Button  variant="primary" type="submit">
+              <Button variant="primary" type="submit">
                 LogIn
               </Button>
             </Form>
@@ -95,5 +97,4 @@ export default function Login() {
       </Container>
     </div>
   );
-
 }

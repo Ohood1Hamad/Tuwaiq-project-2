@@ -19,19 +19,19 @@ background-color: rgb(176, 223, 219);
 }
 #link {
   text-decoration: none;
-  color: #1FA99A;
+  color: #1fa99a;
 }
-#link:hover{
-    color: #bcf0ea;
+#link:hover {
+  color: #bcf0ea;
 }
 #row-log {
   border-radius: 40px;
   margin-top: 50px;
   background-color: rgb(235, 243, 242);
-  color: #1FA99A;
+  color: #1fa99a;
   font-size: 25px;
   margin: 5px;
 }
-#input{
-    color: #fff;
+#input {
+  color: #fff;
 }

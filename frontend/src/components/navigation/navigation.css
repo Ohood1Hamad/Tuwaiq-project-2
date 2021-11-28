@@ -1,3 +1,6 @@
-#logo-in{
-    width: 100px;
+#logo-in {
+  width: 100px;
+}
+.App-navbar {
+  background-image: linear-gradient(-45deg, #bcf0ea, #1fa99a, #058879);
 }

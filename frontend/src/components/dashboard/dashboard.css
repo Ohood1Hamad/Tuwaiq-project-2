@@ -1,43 +1,44 @@
-.cards{
-    border-radius: 10px;
-    opacity: 10;
-   justify-content: center;
-   width: 700px;
-   height: 150px;
-   align-self: center;
-   color: #1FA99A;
-
-   
+.cards {
+  border-radius: 10px;
+  opacity: 10;
+  justify-content: center;
+  width: 700px;
+  align-self: center;
+  color: #1fa99a;
+  opacity: 1;
 }
-.dash-img{
-    align-items: center;
+.App-dash {
+  color: #1fa99a;
 }
-.dashboard{
-    margin: 10px;
+.dash-img {
+  align-items: center;
 }
-.cards:hover{
-    color: #a3ebe2;
+.dashboard {
+  margin: 10px;
+  color: #a3ebe2;
 }
-.prom{
-    border-radius: 10px;
-    opacity: 10;
-    justify-content: center;
-    border-image-outset: unset;
-   width: 700px;
-   height: 600px;
-   align-self: center;
+.cards:hover {
+  color: #a3ebe2;
 }
-.code{
-    border-radius: 10px;
-    opacity: 10;
-    justify-content: center;
-    border-image-outset: unset;
-   width: 300px;
-   height: 150px;
-   align-self: center;
-   border: shadow 10px;;
-   
+.prom {
+  border-radius: 10px;
+  opacity: 10;
+  justify-content: center;
+  border-image-outset: unset;
+  width: 700px;
+  height: 600px;
+  align-self: center;
+}
+.code {
+  border-radius: 10px;
+  opacity: 10;
+  justify-content: center;
+  border-image-outset: unset;
+  width: 300px;
+  height: 150px;
+  align-self: center;
+  border: shadow 10px;
 }
 .code:hover {
-color: aquamarine;
+  color: aquamarine;
 }
