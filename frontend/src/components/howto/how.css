@@ -1,6 +1,6 @@
 button {
   padding: 40px;
-  width: 200px;
+  width:400px;
   margin: 2px;
   border-radius: 8px;
   border: none;
@@ -11,6 +11,7 @@ button {
 .show {
   flex-direction: row;
   justify-content: start;
+  width: 100px;
 }
 .howto {
   text-align: center;

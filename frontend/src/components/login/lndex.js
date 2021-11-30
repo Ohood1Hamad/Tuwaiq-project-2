@@ -33,8 +33,8 @@ export default function Login() {
     <div>
       <Container>
         <Row id="row-log">
-          <Col xs></Col>
-          <Col xs={{ order: 12 }}>
+          <Col ></Col>
+          <Col xs={{ order: 8 }}>
             <div className="row" id="row-log">
               {" "}
               <img

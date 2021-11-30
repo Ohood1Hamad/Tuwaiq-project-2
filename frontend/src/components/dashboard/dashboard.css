@@ -9,9 +9,19 @@
 }
 .App-dash {
   color: #1fa99a;
+  margin-top: 50px;
 }
 .dash-img {
-  align-items: center;
+  margin-left: 130px!important;
+}
+.list{
+  color: #1fa99a;
+  font-size:20px;
+  margin-bottom: 5px;
+}
+.list:hover{
+  color: #a3ebe2;
+
 }
 .dashboard {
   margin: 10px;

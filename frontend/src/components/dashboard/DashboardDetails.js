@@ -49,14 +49,14 @@ const DashboardDetails = () => {
   //   return( )
   // }
   return (
-
     <div className="App-dash">
       <Navigation />
-      <Container>
+      <Container  className="App-dash" >
         <Row>
           <Col>
             <Card className="cards" style={{ width: "500px", hight: "40px" }}>
               <Card.Body>
+                
                 <div>
                   <h6> NAME:</h6>
                   <h2>{user.adminId}</h2>
@@ -76,18 +76,20 @@ const DashboardDetails = () => {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png"
                   alt=" vehicle"
                 />{" "}
-                Last Up date in :{user.update}
+                  Last Up date in :{user.update}
+                <div> 
+                </div>
               </Card.Body>
             </Card>
           </Col>
         </Row>
         <Row>
           <Col>
-          {/* <button onClick={()=>{
+            {/* <button onClick={()=>{
             Navigate("/")
           }} ></button> */}
             <Card className="cards" style={{ width: "18rem", hight: "40px" }}>
-              <Card.Header >
+              <Card.Header>
                 <img
                   className="dash-img"
                   style={{ width: "50px", alignContent: "center" }}
@@ -96,13 +98,16 @@ const DashboardDetails = () => {
                 />
                 <h4> vehicles</h4>
               </Card.Header>
-              <ListGroup variant="flush">
-                <ListGroup.Item>
+              <ListGroup>
+                <ListGroup.Item className="list">
                   {" "}
                   Number of Vehicels: {vehicles.count}
                 </ListGroup.Item>
-                <ListGroup.Item> Vehicel type:{vehicles.type}</ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
+                  {" "}
+                  Vehicel type:{vehicles.type}
+                </ListGroup.Item>
+                <ListGroup.Item className="list">
                   Vehicel type2:{vehicles.typeTwo}
                 </ListGroup.Item>
               </ListGroup>
@@ -112,22 +117,26 @@ const DashboardDetails = () => {
           <Col>
             <Card className="cards" style={{ width: "18rem", hight: "40px" }}>
               <Card.Header>
-                <img src={driving} style={{ width: "50px" }} />
+                <img
+                  className="dash-img"
+                  src={driving}
+                  style={{ width: "50px" }}
+                />
                 <h4> Driving licenses</h4>{" "}
               </Card.Header>
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Number Of Driving Licenses: {drivingLicenses.count}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   Driving Licenses Expiry Date:{drivingLicenses.expiryDate}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   Driving Licenses Issue Date:{drivingLicenses.issueDate}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Driving Licenses Issue Place: {drivingLicenses.issuePlace}
                 </ListGroup.Item>
               </ListGroup>
@@ -137,17 +146,24 @@ const DashboardDetails = () => {
           <Col>
             <Card className="cards" style={{ width: "18rem", hight: "40px" }}>
               <Card.Header>
-                <img style={{ width: "50px" }} src={Traffic} alt=" vehicle" />
+                <img
+                  className="dash-img"
+                  style={{ width: "50px" }}
+                  src={Traffic}
+                  alt=" vehicle"
+                />
                 <h4>Traffic Violations</h4>
               </Card.Header>
               <ListGroup variant="flush" style={{ color: "#a3ebe2" }}>
-                <ListGroup.Item>{user.trafficViolations}</ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
+                  {user.trafficViolations}
+                </ListGroup.Item>
+                <ListGroup.Item className="list">
                   <h6>
                     Unpaid Violations:{trafficViolationpaid.unpaidViolations}
                   </h6>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Paid Violations:{trafficViolationpaid.paidViolations}
                 </ListGroup.Item>
               </ListGroup>
@@ -158,28 +174,33 @@ const DashboardDetails = () => {
           <Col>
             <Card className="cards" style={{ width: "18rem", hight: "40px" }}>
               <Card.Header>
-                <img style={{ width: "50px" }} src={pass} alt=" vehicle" />
+                <img
+                  className="dash-img"
+                  style={{ width: "50px" }}
+                  src={pass}
+                  alt=" vehicle"
+                />
                 <h4> vehicles</h4>
               </Card.Header>
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   Number Of PassPorts: {passport.count}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   PassPort Number : {passport.number}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   PassPort Issue Date: {passport.issueDate}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   PassPort Expiry Date: {passport.expiryDate}
                 </ListGroup.Item>
 
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   PassPort Issue Place:{passport.issuePlace}
                 </ListGroup.Item>
@@ -190,17 +211,25 @@ const DashboardDetails = () => {
           <Col>
             <Card className="cards" style={{ width: "18rem", hight: "40px" }}>
               <Card.Header>
-                <img src={qiya} style={{ width: "50px" }} />
+                <img
+                  src={qiya}
+                  className="dash-img"
+                  style={{ width: "50px" }}
+                />
                 <h4> Qiyas </h4>{" "}
               </Card.Header>
               <ListGroup variant="flush">
-                <ListGroup.Item>Test Date: {qiyas.testDate}</ListGroup.Item>
-                <ListGroup.Item>Total Marks:{qiyas.totalMarks}</ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
+                  Test Date: {qiyas.testDate}
+                </ListGroup.Item>
+                <ListGroup.Item className="list">
+                  Total Marks:{qiyas.totalMarks}
+                </ListGroup.Item>
+                <ListGroup.Item className="list">
                   {" "}
                   type Of Test:{qiyas.typeOfTest}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Driving Licenses Issue Place: {qiyas.appointmentNumber}
                 </ListGroup.Item>
               </ListGroup>
@@ -210,21 +239,25 @@ const DashboardDetails = () => {
           <Col>
             <Card className="cards" style={{ width: "18rem", hight: "40px" }}>
               <Card.Header>
-                <img style={{ width: "50px" }} src={Address} alt=" vehicle" />
+                <img
+                  className="dash-img"
+                  style={{ width: "50px" }}
+                  src={Address}
+                  alt=" vehicle"
+                />
                 <h4> Notional Address</h4>
               </Card.Header>
               <ListGroup variant="flush">
-                <ListGroup.Item></ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Building Number:{nationalAddress.buildingNumber}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Zip Code:{nationalAddress.zipCode}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Additional Number :{nationalAddress.additionalNumber}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="list">
                   Unit Number:{nationalAddress.unitNumber}
                 </ListGroup.Item>
               </ListGroup>
@@ -233,87 +266,6 @@ const DashboardDetails = () => {
         </Row>
       </Container>
 
-      {/* <Container className="dashboard">
-        <Row>
-          <Col> </Col>
-          <Col md={7}>
-            <Card className="cards">
-              <Card.Body>
-                <Row />
-                <Row>
-                  <Col>
-                    <p> Name: </p>
-                    <h3> {user.adminId}</h3>
-                  </Col>
-                  <Col>
-                    {" "}
-                    <p> National ID number / Iqama ID: </p>
-                    <h3>{user.nationalId}</h3>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="code-card">
-              <Card.Body>This is some text within a card body.</Card.Body>
-            </Card>{" "}
-          </Col>
-        </Row>
-        <Row>
-          <Col></Col>
-
-          <Col>
-          <Card style={{ width: '18rem' }}>
-  <Card.Header>Featured</Card.Header>
-  <ListGroup variant="flush">
-    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-  </ListGroup>
-</Card>
-          </Col>
-          <Col>
-            <Card className="code">
-              <Card.Body> promtion </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="code">
-              <Card.Body> promtion </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="code">
-              <Card.Body> promtion </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col></Col>
-
-          <Col>
-            <Card className="code">
-              <Card.Body> promtion </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="code">
-              <Card.Body> promtion </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="code">
-              <Card.Body> promtion </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="code">
-              <Card.Body> promtion </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container> */}
       <Footer />
     </div>
   );

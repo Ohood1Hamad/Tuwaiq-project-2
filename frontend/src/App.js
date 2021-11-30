@@ -11,6 +11,7 @@ import Howwork from "./components/howto/Howto";
 import Aboutus from "./components/About/About";
  import NoFound from './components/NoFound/NoFound';
 import Navigation from "./components/navigation/Navigation";
+import Header from "./components/header";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
       <Routes>
         <Route>
         
-          <Route path="/" element={<Home />}>
+          <Route path="/" element={<Header />}>
          <Route path="/main" element={<Main />}/>
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Howwork" element={<Howwork />} />

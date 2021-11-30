@@ -1,10 +1,8 @@
 import React from "react";
 // import axios from "axios";
 import "./navigation.css";
-import { Link } from "react-router-dom";
 import {
   NavDropdown,
-  Offcanvas,
   Navbar,
   Container,
   Nav,
