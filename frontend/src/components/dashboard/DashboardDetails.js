@@ -54,7 +54,7 @@ const DashboardDetails = () => {
       <Container  className="App-dash" >
         <Row>
           <Col>
-            <Card className="cards" style={{ width: "500px", hight: "40px" }}>
+            <Card className="cards" style={{ width: "500px"}}>
               <Card.Body>
                 
                 <div>
@@ -69,21 +69,25 @@ const DashboardDetails = () => {
             </Card>
           </Col>
           <Col>
-            <Card className="cards" style={{ width: "500px", hight: "40px" }}>
+            <Card className="cards" style={{ width: "500px",high:"5000px" }}>
               <Card.Body>
                 <img
                   style={{ width: "100px" }}
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png"
                   alt=" vehicle"
                 />{" "}
-                  Last Up date in :{user.update}
                 <div> 
+                  <p>
+                  Last Up date in :
+                  {user.update}
+
+                  </p>
                 </div>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-        <Row>
+        <Row className="card-roow">
           <Col>
             {/* <button onClick={()=>{
             Navigate("/")
