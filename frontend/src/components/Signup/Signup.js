@@ -21,7 +21,7 @@ export default function Signup() {
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        navigate("/DashDeta", { state: { id: res.data.id } });
+        navigate("/login");
       })
       .catch((err) => {
         console.log(err);
@@ -46,12 +46,12 @@ export default function Signup() {
                 className="col"
                 style={{ fontSize: "35px", fontWeight: "bold" }}
               >
-                Login
+               Sing Up
               </div>
               <div className="col">
                 {" "}
-                <Link to="/signup" id="link">
-                  sing up{" "}
+                <Link to="/login" id="link">
+                 LogIn{" "}
                 </Link>{" "}
               </div>{" "}
             </div>
@@ -86,7 +86,7 @@ export default function Signup() {
                 <Form.Check type="checkbox" label="remember me" />
               </Form.Group>
               <Button variant="primary" type="submit">
-                LogIn
+               singup
               </Button>
             </Form>
           </Col>
