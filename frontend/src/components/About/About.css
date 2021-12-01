@@ -1,12 +1,14 @@
-.container {
+.about{
   font-size: 18px;
   flex-wrap: nowrap;
+  margin-top: 50px;
 }
 
-.read-or-hide {
+.read-hide {
   color: rgb(137, 240, 197);
   cursor: pointer;
 }
 .read {
   color: #1fa99a;
+  
 }

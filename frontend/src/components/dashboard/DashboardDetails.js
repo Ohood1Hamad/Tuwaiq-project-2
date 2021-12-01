@@ -1,8 +1,7 @@
 import React from "react";
-import { Card, Col, Row, Container, ListGroup, Button } from "react-bootstrap";
+import { Card, Col, Row, Container, ListGroup } from "react-bootstrap";
 import Navigation from "../navigation/Navigation";
-import Dashboard from "./Dashboard";
-import { Navigate, useLocation } from "react-router";
+import {  useLocation } from "react-router";
 import "./dashboard.css";
 import { useState, useEffect } from "react";
 import Footer from "../footerin/index";
@@ -42,12 +41,7 @@ const DashboardDetails = () => {
         console.log(err);
       });
   }, []);
-  // function toDashboard() {
-  //   setUser([]);
-  // }
-  // const usersdash = user.map(users){
-  //   return( )
-  // }
+ 
   return (
     <div className="App-dash">
       <Navigation />
@@ -125,6 +119,7 @@ const DashboardDetails = () => {
                   className="dash-img"
                   src={driving}
                   style={{ width: "50px" }}
+                  alt=" "
                 />
                 <h4> Driving licenses</h4>{" "}
               </Card.Header>
@@ -184,7 +179,7 @@ const DashboardDetails = () => {
                   src={pass}
                   alt=" vehicle"
                 />
-                <h4> vehicles</h4>
+                <h4> PassPort </h4>
               </Card.Header>
               <ListGroup variant="flush">
                 <ListGroup.Item className="list">
@@ -219,8 +214,10 @@ const DashboardDetails = () => {
                   src={qiya}
                   className="dash-img"
                   style={{ width: "50px" }}
+                  alt=" "
+
                 />
-                <h4> Qiyas </h4>{" "}
+                <h4> Qiyas Exam Results </h4>{" "}
               </Card.Header>
               <ListGroup variant="flush">
                 <ListGroup.Item className="list">
@@ -234,7 +231,7 @@ const DashboardDetails = () => {
                   type Of Test:{qiyas.typeOfTest}
                 </ListGroup.Item>
                 <ListGroup.Item className="list">
-                  Driving Licenses Issue Place: {qiyas.appointmentNumber}
+                Appointment Number: {qiyas.appointmentNumber}
                 </ListGroup.Item>
               </ListGroup>
             </Card>

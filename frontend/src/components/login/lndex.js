@@ -31,10 +31,10 @@ export default function Login() {
   }
   return (
     <div>
-      <Container>
+      <Container id='con'>
         <Row id="row-log">
           <Col ></Col>
-          <Col xs={{ order: 8 }}>
+          <Col xs={{ order: 6 }}>
             <div className="row" id="row-log">
               {" "}
               <img

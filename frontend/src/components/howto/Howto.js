@@ -10,7 +10,7 @@ const Howwork = () => {
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
   return (
-    <div className="App">
+    <div className="App-cont">
       <Container>
         <Row>
           <h1 className="howto"> How to Use Tawakkalna </h1>

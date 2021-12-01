@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Row ,Col} from "react-bootstrap";
 import "./Contact.css";
 
 const Contact = () => {
@@ -8,11 +7,13 @@ const Contact = () => {
     <div className="contact">
       <Container>
         <Row>
-          <div>
+        <div>
             <h1 style={{ textAlign: "center", fontSize: "60px" }}>
               CONTACT US{" "}
             </h1>
           </div>
+          <Col>
+          
 
           <div className="ro-contact">
             <div className="col">
@@ -33,7 +34,10 @@ const Contact = () => {
               </div>
             </div>
           </div>
+          </Col>
+          <Col></Col>
         </Row>
+        <Row></Row>
       </Container>
     </div>
   );

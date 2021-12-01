@@ -3,31 +3,27 @@ body {
 }
 .App-head {
   background-image: linear-gradient(-45deg, #bcf0ea, #1fa99a, #058879);
-position: fixed ;
-width:100%;
-text-decoration: none;
-
-
+  position: fixed;
+  width: 100%;
+  text-decoration: none;
+  height: 100px;
 }
 #home-nav {
   font-size: 20px;
   color: azure;
-/* text-decoration: none!important */
-
 }
-#home-nav:hover{
-    color:#058879 ;
+#home-nav:hover {
+  color: #058879;
 }
-
 
 #sing {
   background-color: rgb(182, 96, 96);
   text-decoration: none;
   color: #022521;
   border-radius: 50px;
-  margin: 30px;
-  padding: 30px;
-  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 27px;
   width: 200px;
   text-align: center;
 }

@@ -1,11 +1,5 @@
+const NoFound = () => {
+  return <div className="App"> SORRY Page No Found</div>;
+};
 
-const NoFound
-= () => {
-    return <div className="App">
-      Page  No Found
-
-    </div>;
-  };
-  
-  export default NoFound
-  ;
+export default NoFound;

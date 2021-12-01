@@ -9,30 +9,26 @@ import DashboardDetails from "./components/dashboard/DashboardDetails";
 import Contact from "./components/contact/contactus";
 import Howwork from "./components/howto/Howto";
 import Aboutus from "./components/About/About";
- import NoFound from './components/NoFound/NoFound';
+import NoFound from "./components/NoFound/NoFound";
 import Navigation from "./components/navigation/Navigation";
-import Header from "./components/header";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route>
-        
-          <Route path="/" element={<Header />}>
-         <Route path="/main" element={<Main />}/>
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Howwork" element={<Howwork />} />
-          <Route path="/Aboutus" element={<Aboutus />} />
-		  </Route>
-          {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
+          <Route path="/" element={<Home />}>
+            <Route path="/main" element={<Main />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Howwork" element={<Howwork />} />
+            <Route path="/Aboutus" element={<Aboutus />} />
+          </Route>
           <Route path="/Navigation" element={<Navigation />} />
-		  <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/DashDeta" element={<DashboardDetails />} />
           <Route path="/signup" element={<Signup />} />
-           <Route path="*" element={<NoFound/>}/>
+          <Route path="*" element={<NoFound />} />
 
-{/* <Route path="/dashboard" element={<Users/>}/>  */} 
         </Route>
       </Routes>
     </div>

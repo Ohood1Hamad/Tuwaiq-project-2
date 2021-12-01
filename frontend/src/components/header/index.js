@@ -3,14 +3,11 @@ import { Outlet, Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "./header.css";
 import Main from "../main";
-import Foooter from "../footerout/foooter";
-import Contact from "../contact/contactus";
-import Howwork from "../howto/Howto";
-import Aboutus from "../About/About";
+
 const Header = () => {
   return (
     <div >
-      <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top" className="App-head">
+      <Navbar collapseOnSelect variant="dark" sticky="top" className="App-head">
         <Container>
           <Navbar.Brand href="/mian">
             <img
@@ -42,11 +39,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Main />
-      <Aboutus />
-      <Howwork />
-      <Contact />
-      <Foooter />
+      
       <Outlet />
     </div>
   );

@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
+import { Form, Button, Col, Row, Container } from "react-bootstrap";
 
+import "./singup.css";
 export default function Signup() {
   const [nationalId, setNationalId] = useState("");
   const [password, setPassword] = useState("");
@@ -13,71 +14,85 @@ export default function Signup() {
     const data = {
       nationalid: "",
       password: "",
-
     };
-    // console.log(
-    //   "" + JSON.stringify({ nationalid: nationalId }, { password: password })
-    // );
+
     axios
-      .post("/user/singup",data)
+      .post("/user/singup", data)
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        navigate("/");
-        
+        navigate("/DashDeta", { state: { id: res.data.id } });
       })
       .catch((err) => {
         console.log(err);
-            });
+      });
   }
   return (
-    <div className="continer">
-      <div className="row">
-        <div className="col-6">
-          <div className="row">
-            <div className="col">Sing up</div>
-            <div className="col">
+    <div>
+      <Container id="con">
+        <Row id="row-log">
+          <Col></Col>
+          <Col xs={{ order: 6 }}>
+            <div className="row" id="row-log">
               {" "}
-              <Link to="/login"> login </Link>{" "}
+              <img
+                id="logot"
+                src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
+                alt=" "
+              />
             </div>
-          </div>
+            <div className="row" id="row-log">
+              <div
+                className="col"
+                style={{ fontSize: "35px", fontWeight: "bold" }}
+              >
+                Login
+              </div>
+              <div className="col">
+                {" "}
+                <Link to="/signup" id="link">
+                  sing up{" "}
+                </Link>{" "}
+              </div>{" "}
+            </div>
+            <Form
+              onSubmit={(e) => {
+                handleSubmit(e);
+              }}
+            >
+              <Form.Group className="mb-3" controlId="">
+                <Form.Label> Enter Nationalid </Form.Label>
+                <Form.Control
+                  type="id"
+                  placeholder="Enter Nationalid"
+                  onChange={(event) => {
+                    setNationalId(event.target.value);
+                  }}
+                />
+                <Form.Text className="text-muted"></Form.Text>
+              </Form.Group>
 
-          <Form
-            onSubmit={(e) => {
-              handleSubmit(e);
-            }}
-          >
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label> Enter Nationalid </Form.Label>
-              <Form.Control
-                type="id"
-                placeholder="Enter Nationalid"
-                onChange={(event) => {
-                  setNationalId(event.target.value);
-                }}
-              />
-              <Form.Text className="text-muted"></Form.Text>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                onChange={(event) => {
-                  setPassword(event.target.value);
-                }}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              LogIn
-            </Button>
-          </Form>
-        </div>
-      </div>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  onChange={(event) => {
+                    setPassword(event.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="remember me" />
+              </Form.Group>
+              <Button variant="primary" type="submit">
+                LogIn
+              </Button>
+            </Form>
+          </Col>
+          <Col xs={{ order: 1 }}></Col>
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -1,6 +1,4 @@
 import React from "react";
-import ReactReadMoreReadLess from "react-read-more-read-less";
-// import { Link } from 'react-router-dom';
 import { Col, Row, Container } from "react-bootstrap";
 import "./About.css";
 import { useState } from "react";
@@ -14,7 +12,7 @@ const ReadMore = ({ children }) => {
   return (
     <p className="text">
       {isReadMore ? text.slice(0, 250) : text}
-      <span onClick={toggleReadMore} className="read-or-hide">
+      <span onClick={toggleReadMore} className="read-hide">
         {isReadMore ? "...read more" : " show less"}
       </span>
     </p>
@@ -24,16 +22,15 @@ const ReadMore = ({ children }) => {
 const Aboutus = () => {
   return (
     <div>
-      <Container>
+      <Container className="about">
         <Row>
           <Col>
-            <img src="https://ta.sdaia.gov.sa/images/app.png" alt="about" />
+            <img width="700px" src="https://ta.sdaia.gov.sa/images/app.png" alt="about" />
           </Col>
-          <Col></Col>
           <Col className="read">
             <h1> About Tawakkalna </h1>
             <p>
-              <ReadMore>
+              <ReadMore >
                 As the Saudi Arabian Government is keen to preserve the health
                 and safety of citizens and residents within its soil from the
                 risk of the spread of novel coronavirus; The Saudi Data and

@@ -1,17 +1,12 @@
 import React from "react";
 // import axios from "axios";
 import "./navigation.css";
-import {
-  NavDropdown,
-  Navbar,
-  Container,
-  Nav,
-} from "react-bootstrap";
+import { NavDropdown, Navbar, Container, Nav } from "react-bootstrap";
 
 const Navigation = () => {
   return (
     <div className="App-navbar">
-      <Navbar bg="light" className="App-navbar" expand={false}>
+      <Navbar bg="light" className="App-navbar" sticky="top" expand={false}>
         <Container fluid>
           <Nav className="me-auto">
             <NavDropdown.Item href="/">SING UOT</NavDropdown.Item>
