@@ -12,8 +12,8 @@ export default function Signup() {
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
-      nationalid: "",
-      password: "",
+      nationalId: nationalId,
+      passWord: password,
     };
 
     axios

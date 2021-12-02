@@ -43,7 +43,8 @@ const DashboardDetails = () => {
   }, []);
  
   return (
-    <div className="App-dash">
+
+    <div >
       <Navigation />
       <Container  className="App-dash" >
         <Row>

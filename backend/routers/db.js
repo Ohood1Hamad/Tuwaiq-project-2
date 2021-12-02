@@ -93,7 +93,7 @@ const user = [
     drivingLicenses: {
       issueDate: "12/08/2014",
       expiryDate: "12/08/2024",
-      issuePlace: "NewYork",
+      issuePlace: "JAPAN",
       count: 1,
     },
     vehicles: {
@@ -109,7 +109,7 @@ const user = [
     passport: {
       number: "78962541",
       issueDate: "05/12/2015",
-      issuePlace: "NewTork",
+      issuePlace: "JAPAN",
       expiryDate: "09/05/2020",
       count: 1,
     },
@@ -122,7 +122,7 @@ const user = [
     qiyas: {
       testDate: "03/05/2019",
       totalMarks: "70",
-      typeOfTest: "Teachers",
+      typeOfTest: "Executioner",
       appointmentNumber: "963284845",
     },
   },

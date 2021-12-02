@@ -11,7 +11,6 @@ const Home = () => {
       <Header/> 
        <Main />
       <Aboutus />
-    
       <Howwork />
       <Contact />
       <Foooter />

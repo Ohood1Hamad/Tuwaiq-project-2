@@ -2,7 +2,6 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "./header.css";
-import Main from "../main";
 
 const Header = () => {
   return (
