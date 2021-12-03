@@ -2,35 +2,44 @@
   border-radius: 10px;
   opacity: 10;
   justify-content: center;
-  width: 700px;
+  width: 500px;
+  margin: 5px;
   align-self: center;
-  color: #1fa99a;
   opacity: 1;
+  margin-top: 10px;
+  text-align: center;
+}
+.cards-main{
+  border-radius: 10px;
+  opacity: 10;
+  justify-content: center;
+  width: 500px;
+  margin: 5px;
+  align-self: center;
+  opacity: 1;
+  margin-top: 10px;
+  text-align: center;
+  height: 200px;
 }
 .App-dash {
-  color: #1fa99a;
+  color: #027a6c;
   margin-top: 50px;
 }
+.codew{
+  width: 100px;
+}
 .dash-img {
-  margin-left: 130px!important;
+  margin-bottom: 20px;
+  width:50px;
+    align-content:center;
+    width: 90px;
 }
 .card-roow{
   margin-top: 50px;
 }
-.list{
-  color: #1fa99a;
-  font-size:20px;
-  margin-bottom: 5px;
-}
-.list:hover{
-  color: #a3ebe2;
 
-}
 .dashboard {
   margin: 10px;
-  color: #a3ebe2;
-}
-.cards:hover {
   color: #a3ebe2;
 }
 .prom {
@@ -42,16 +51,5 @@
   height: 600px;
   align-self: center;
 }
-.code {
-  border-radius: 10px;
-  opacity: 10;
-  justify-content: center;
-  border-image-outset: unset;
-  width: 300px;
-  height: 150px;
-  align-self: center;
-  border: shadow 10px;
-}
-.code:hover {
-  color: aquamarine;
-}
+
+

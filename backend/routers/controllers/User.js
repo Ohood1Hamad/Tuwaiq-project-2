@@ -6,7 +6,6 @@ const getAllUser = (req, res) => {
 //////////////////////////////////////////////get////////////////////
 const getUser = (req, res) => {
 
-  console.log(req.body);
   const userinfo = user.find((elem) => {
     return (
       elem.nationalId == req.body.nationalId &&

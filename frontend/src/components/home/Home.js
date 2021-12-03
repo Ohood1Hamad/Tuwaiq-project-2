@@ -7,14 +7,16 @@ import Howwork from "../howto/Howto";
 import Aboutus from "../About/About";
 
 const Home = () => {
-  return <div className="App">
-      <Header/> 
-       <Main />
+  return (
+    <div className="App">
+      <Header />
+      <Main />
       <Aboutus />
       <Howwork />
       <Contact />
       <Foooter />
-  </div>;
+    </div>
+  );
 };
 
 export default Home;

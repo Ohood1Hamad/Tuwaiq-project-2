@@ -11,12 +11,16 @@
     justify-items: center;
     margin-bottom: 50px;
   }
-  #link {
-    text-decoration: none;
-    color: #1fa99a;
+  #loginin{
+    font-size: 35px;
+     font-weight:bold;
   }
-  #link:hover {
-    color: #bcf0ea;
+  #link-in {
+    text-decoration: none;
+    color: #03554d;
+  }
+  #link-in:hover {
+    color: #3a9c94;
   }
   #row-log {
     border-radius: 40px;

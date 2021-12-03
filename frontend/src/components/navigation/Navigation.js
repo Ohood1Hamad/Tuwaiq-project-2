@@ -1,15 +1,17 @@
 import React from "react";
-// import axios from "axios";
 import "./navigation.css";
-import { NavDropdown, Navbar, Container, Nav } from "react-bootstrap";
+import {Link} from "react-router-dom"
+import { Navbar, Container, Nav } from "react-bootstrap";
 
 const Navigation = () => {
   return (
     <div className="App-navbar">
-      <Navbar bg="light" className="App-navbar" sticky="top" expand={false}>
+      <Navbar bg="light" className="App-navbar" >
         <Container fluid>
-          <Nav className="me-auto">
-            <NavDropdown.Item href="/">SING UOT</NavDropdown.Item>
+          <Nav className="nav-in">
+           <Link className="nav-in" to="/">SING UOT</Link>
+            <Link className="nav-in" to="/Dashboard">Dashboard</Link>
+           <Link className="nav-in" to="/DashDeta">Back</Link>
           </Nav>
 
           <Navbar.Brand href="#">
@@ -22,6 +24,8 @@ const Navigation = () => {
           </Navbar.Brand>
         </Container>
       </Navbar>
+     
+
     </div>
   );
 };

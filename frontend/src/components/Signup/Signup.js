@@ -44,13 +44,13 @@ export default function Signup() {
             <div className="row" id="row-log">
               <div
                 className="col"
-                style={{ fontSize: "35px", fontWeight: "bold" }}
+                id="loginin"
               >
                Sing Up
               </div>
               <div className="col">
                 {" "}
-                <Link to="/login" id="link">
+                <Link to="/login" id="link-in">
                  LogIn{" "}
                 </Link>{" "}
               </div>{" "}

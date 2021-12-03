@@ -21,6 +21,7 @@ export default function Login() {
       .then((res) => {
         console.log(res);
         console.log(res.data);
+        sessionStorage.setItem('users',res.data.id);
         navigate("/DashDeta", { state: { id: res.data.id } });
       })
       .catch((err) => {
@@ -45,8 +46,7 @@ export default function Login() {
             </div>
             <div className="row" id="row-log">
               <div
-                className="col"
-                style={{ fontSize: "35px", fontWeight: "bold" }}
+                className="col" id="loginin"
               >
                 Login
               </div>
