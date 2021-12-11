@@ -1,17 +1,37 @@
 const express = require('express');
-const {logRouters} = require("./routers/routes/logRouters")
+const cors = require('cors');
+const bcrypt = require('bcrypt');
+require("dotenv").config();
+const db = require('./models/db');
+const {User}= require('./models/user')
+const jwt = require('jsonwebtoken')
+ const {logRouters} = require("./Routers/routes/logRouters")
 const app = express();
 app.use(express.json());
 
 
-//routers
 
-//built-in middlewares
-app.use("/user",logRouters);
+ app.use("/user",logRouters);
+ app.use(cors());
+// const authentication = (req,res,next)=>{
+// 	if(req.header('Authorization')){
+// 		const token = req.header('Authorization').split(' ')[1]
 
+// 		jwt.verify(token,process.env.SECRET,(err,result)=>{
+// 			if(err){
+// 				console.log(err)
+// 				res.json('forbidden')
+// 				return
+// 			}
+// 			req.token = result
+// 			next()
+// 		})
+// 	}else {
+// 		console.log('no header')
+// 		res.status(404).json('for')
+// 	}
+// }
 
-//third-party middleware
-// app.use(cors());
 
 //app routers
 

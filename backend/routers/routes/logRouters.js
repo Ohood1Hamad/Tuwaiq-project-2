@@ -2,8 +2,7 @@ const express = require("express");
 
 const logRouters = express.Router();
 
-const {getUser,getAllUser,updateUser,addNewUser,getUserInfo} = require("../controllers/user");
-const { user } = require("../db");
+const {getUser,getAllUser,updateUser,addNewUser,getUserInfo} = require("../controllers/User");
 
 logRouters.get("/",getAllUser);
 logRouters.post('/login',getUser);

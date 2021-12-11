@@ -17,11 +17,11 @@ export default function Login() {
     };
 
     axios
-      .post("/user/login", data)
+      .post(`/user/login`, data)
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        sessionStorage.setItem('users',res.data.id);
+        // localStorage.setItem("token", JSON.stringify(res.data.token));
         navigate("/DashDeta", { state: { id: res.data.id } });
       })
       .catch((err) => {
@@ -32,9 +32,9 @@ export default function Login() {
   }
   return (
     <div>
-      <Container id='con'>
+      <Container id="con">
         <Row id="row-log">
-          <Col ></Col>
+          <Col></Col>
           <Col xs={{ order: 6 }}>
             <div className="row" id="row-log">
               {" "}
@@ -45,9 +45,7 @@ export default function Login() {
               />
             </div>
             <div className="row" id="row-log">
-              <div
-                className="col" id="loginin"
-              >
+              <div className="col" id="loginin">
                 Login
               </div>
               <div className="col">

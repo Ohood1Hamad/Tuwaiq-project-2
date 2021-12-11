@@ -1,50 +1,113 @@
-const { user } = require("../db");
+const { User } = require("../../models/user");
+const db = require("../../models/db");
 
 const getAllUser = (req, res) => {
-  res.send(user);
+  res.send(User);
 };
 //////////////////////////////////////////////get////////////////////
-const getUser = (req, res) => {
+// const getUser = (req, res) => {
+//   const userinfo = user.find((elem) => {
+//     return (
+//       elem.nationalId == req.body.nationalId &&
+//       elem.passWord == req.body.passWord
+//     );
+//   });
 
-  const userinfo = user.find((elem) => {
-    return (
-      elem.nationalId == req.body.nationalId &&
-      elem.passWord == req.body.passWord
-    );
-  });
+//   if (userinfo) {
+//     res.send(userinfo);
+//     return;
+//   }
+//   res.status(404).send("user not found");
+// };
+const getUser = (req, res) => {
+  const {
+    nationalId,
+    passWord,
+    
+  } = req.body;
+
  
-  if (userinfo) {
-    res.send(userinfo);
-    return;
-  }
-  res.status(404).send("user not found");
-};
+ const user= User.findOne({ nationalId:nationalId})
+    .then((result) => {
+      if (result) {
+
+        bcrypt.compare(passWord, result.passWord, (err, result2) => {
+          if (err) {
+            console.log(err);
+            res.json(err);
+            return;
+          }
+          if (result2) {
+            const payload = {
+              id: result._id,
+              nationalId: result.nationalId,
+            };
+            const options = {
+              expiresIn: "3m",
+            };
+
+            const secret = process.env.SECRET;
+
+            const token = jwt.sign(payload, secret, options);
+
+            res.status(200).json({ message: "user logged in", token: token });
+
+			
+          } else {
+            res.status(403).json("password incorrect");
+          }
+        });
+      } else {
+        res.status(404).json("username incorrect");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err.message);
+    })
+}
 ///////////////////////////get dashbord////////////////////////
 
 const getUserInfo = (req, res) => {
-  const userId = user.find(({ id }) => id === parseInt(req.body.id));
+  const userId = User.find(({ id }) => id === parseInt(req.body.id));
   if (!userId) return res.status(404).send("ERROR USER NOT FOUND");
   res.send(userId);
 };
 
 ////////////////////////////////////////post/////////////////////////
 
-const addNewUser = (req, res) => {
-  const addedUser = {
-    nationalId: req.body.nationalid,
-    passWord: req.body.password,
-    adminId: req.body.adminId,
-    drivingLicenses: req.body.drivingLicenses,
-    vehicles: req.body.vehicles,
-    trafficViolations: req.body.trafficViolations,
-    passPorts: req.body.passPorts,
-    qiyas: req.body.qiyas,
-    vehicleInsurances: req.body.vehicleInsurances,
-  };
+const addNewUser = async (req, res) => {
+  const {
+    nationalId,
+    passWord,
+    userName,
+    drivingLicenses,
+    vehicles,
+    trafficViolations,
+    passPorts,
+    qiyas,
+    vehicleInsurances,
+  } = req.body;
+  try {
+    const user = await User.create({
+      nationalId,
+      passWord,
+      userName,
+      drivingLicenses,
+      vehicles,
+      trafficViolations,
+      passPorts,
+      qiyas,
+      vehicleInsurances,
+    });
+    res.status(202).json(user);
+  } catch (err) {
+    console.log(err);
+    res.status(404).send("error");
+  }
+  // user.push(addedUser);
 
-  user.push(addedUser);
-
-  res.status(201).send(addedUser);
+  // res.status(201).send(addedUser);
 };
 
 const updateUser = (req, res) => {
