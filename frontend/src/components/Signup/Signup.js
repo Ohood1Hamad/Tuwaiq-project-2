@@ -17,7 +17,7 @@ export default function Signup() {
     };
 
     axios
-      .post("/user/singup", data)
+      .post(`/user/singup`, data)
       .then((res) => {
         console.log(res);
         console.log(res.data);

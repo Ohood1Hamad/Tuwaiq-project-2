@@ -6,23 +6,23 @@ import "./login.css";
 
 export default function Login() {
   const [nationalId, setNationalId] = useState("");
-  const [password, setPassword] = useState("");
+  const [passWord, setPassword] = useState("");
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
       nationalId: nationalId,
-      passWord: password,
+      passWord: passWord,
     };
 
     axios
-      .post(`/user/login`, data)
+      .get("http://localhost:3000/user/login", data)
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        // localStorage.setItem("token", JSON.stringify(res.data.token));
-        navigate("/DashDeta", { state: { id: res.data.id } });
+       localStorage.setItem("token", JSON.stringify(res.data.token));
+        // navigate("/DashDeta", { state: { id: res.data.id } });
       })
       .catch((err) => {
         console.log(err.response.data);
